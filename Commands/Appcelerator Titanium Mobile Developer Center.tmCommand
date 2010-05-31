@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>exit_show_html "&lt;meta http-equiv=Refresh content='0;URL=http://developer.appcelerator.com/apidoc/search/mobile/1.3?q=${TM_SELECTED_TEXT:-$TM_CURRENT_WORD}'&gt;"
+</string>
+	<key>fallbackInput</key>
+	<string>word</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>^h</string>
+	<key>name</key>
+	<string>Appcelerator Titanium Mobile Developer Center</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>scope</key>
+	<string>source.js</string>
+	<key>uuid</key>
+	<string>E910E64B-7423-4B47-8F18-1847D4DEE85B</string>
+</dict>
+</plist>
