@@ -5,21 +5,23 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>exit_show_html "&lt;meta http-equiv=Refresh content='0;URL=http://developer.appcelerator.com/apidoc/search/mobile/1.3?q=${TM_SELECTED_TEXT:-$TM_CURRENT_WORD}'&gt;"
+	<string>#!/usr/bin/env ruby
+require ENV['TM_BUNDLE_SUPPORT'] + '/lib/tm/complete'
+TextMate::Complete.new.tip!
 </string>
 	<key>fallbackInput</key>
 	<string>word</string>
 	<key>input</key>
-	<string>selection</string>
+	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>^h</string>
+	<string>~</string>
 	<key>name</key>
-	<string>Appcelerator Titanium Mobile Developer Center</string>
+	<string>Documentation for Word / Selection (tool tip)</string>
 	<key>output</key>
 	<string>showAsTooltip</string>
 	<key>scope</key>
-	<string>source.js.ti.mobile</string>
+	<string>source.js.ti</string>
 	<key>uuid</key>
-	<string>E910E64B-7423-4B47-8F18-1847D4DEE85B</string>
+	<string>59FF1465-9977-49BE-97F8-3205CBF011C5</string>
 </dict>
 </plist>

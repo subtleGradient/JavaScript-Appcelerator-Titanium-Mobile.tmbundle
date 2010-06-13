@@ -4,6 +4,17 @@
 <dict>
 	<key>name</key>
 	<string>JavaScript Appcelerator Titanium Mobile</string>
+	<key>ordering</key>
+	<array>
+		<string>1B66F6F3-D2F3-4324-A11E-E0E5F8670AD7</string>
+		<string>E4384F6B-629C-4F74-A011-59D3BF40D2B5</string>
+		<string>59FF1465-9977-49BE-97F8-3205CBF011C5</string>
+		<string>88506B58-5A8F-4009-8F5A-AC39182378EB</string>
+		<string>E910E64B-7423-4B47-8F18-1847D4DEE85B</string>
+		<string>CB708386-8483-491A-AE9A-A279EA0E17CC</string>
+		<string>602D47B3-1101-483B-A11E-86550C77E229</string>
+		<string>1BE04E27-BDCF-4B7D-B7A5-479D0478689F</string>
+	</array>
 	<key>uuid</key>
 	<string>3F2569A1-DA0B-43CC-B968-A402EC3C1079</string>
 </dict>

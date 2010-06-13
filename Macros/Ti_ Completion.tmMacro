@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>argument</key>
+			<string>.</string>
+			<key>command</key>
+			<string>insertText:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>beforeRunningCommand</key>
+				<string>nop</string>
+				<key>command</key>
+				<string>#!/usr/bin/env ruby
+require ENV['TM_BUNDLE_SUPPORT'] + '/lib/tm/complete'
+TextMate::Complete.new.complete!
+</string>
+				<key>input</key>
+				<string>none</string>
+				<key>keyEquivalent</key>
+				<string>~</string>
+				<key>name</key>
+				<string>Code Completion</string>
+				<key>output</key>
+				<string>showAsTooltip</string>
+				<key>scope</key>
+				<string>source.js.ti</string>
+				<key>uuid</key>
+				<string>88506B58-5A8F-4009-8F5A-AC39182378EB</string>
+			</dict>
+			<key>command</key>
+			<string>executeCommandWithOptions:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string>.</string>
+	<key>name</key>
+	<string>Ti. Completion</string>
+	<key>scope</key>
+	<string>meta.complete.method.ti</string>
+	<key>uuid</key>
+	<string>1B66F6F3-D2F3-4324-A11E-E0E5F8670AD7</string>
+</dict>
+</plist>

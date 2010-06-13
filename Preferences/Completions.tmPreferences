@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Completions</string>
+	<key>scope</key>
+	<string>source.js</string>
+	<key>settings</key>
+	<dict>
+		<key>completions</key>
+		<array/>
+		<key>shellVariables</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>TM_COMPLETIONS_FILES</string>
+				<key>value</key>
+				<string>"completions.json"</string>
+			</dict>
+		</array>
+	</dict>
+	<key>uuid</key>
+	<string>E4384F6B-629C-4F74-A011-59D3BF40D2B5</string>
+</dict>
+</plist>

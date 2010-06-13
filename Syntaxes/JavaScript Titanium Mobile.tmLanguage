@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>ti.js</string>
+		<string>js</string>
+	</array>
+	<key>foldingStartMarker</key>
+	<string>(?x)^
+			#   Yes *+      Open  (         Blank |Comments                                        | (No Paren | String) | String                                                        | (Nested Parens             )  )*+
+			(?&gt; \g&lt;yesS&gt;*+  \[    (?&lt;yesS&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noS&gt;[^\[\]'"/]) | (?&lt;str&gt; '(\\'|[^'])*+' | "(\\"|[^"])*+" | /(\\/|[^/])*+/) | (?&lt;squar&gt; \[ \g&lt;yesS&gt;*+ \] )  )*+
+			|   \g&lt;yesR&gt;*+  \(    (?&lt;yesR&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noR&gt;[^\(\)'"/]) | \g&lt;str&gt;                                                       | (?&lt;round&gt; \( \g&lt;yesR&gt;*+ \) )  )*+
+			|   \g&lt;yesC&gt;*+  \{    (?&lt;yesC&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noC&gt;[^\{\}'"/]) | \g&lt;str&gt;                                                       | (?&lt;curly&gt; \{ \g&lt;yesC&gt;*+ \} )  )*+
+		)$</string>
+	<key>foldingStopMarker</key>
+	<string>(?x)^
+			#                     (         Blank |Comments                                        | (No Paren | String) | String                                                        | (Nested Parens             )  )*+  Close  Yes *+
+			(?&gt;                   (?&lt;yesS&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noS&gt;[^\[\]'"/]) | (?&lt;str&gt; '(\\'|[^'])*+' | "(\\"|[^"])*+" | /(\\/|[^/])*+/) | (?&lt;squar&gt; \[ \g&lt;yesS&gt;*+ \] )  )*+  \]     \g&lt;yesS&gt;*+
+			|                     (?&lt;yesR&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noR&gt;[^\(\)'"/]) | \g&lt;str&gt;                                                       | (?&lt;round&gt; \( \g&lt;yesR&gt;*+ \) )  )*+  \)     \g&lt;yesR&gt;*+
+			|                     (?&lt;yesC&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noC&gt;[^\{\}'"/]) | \g&lt;str&gt;                                                       | (?&lt;curly&gt; \{ \g&lt;yesC&gt;*+ \} )  )*+  \}     \g&lt;yesC&gt;*+
+		)$</string>
+	<key>keyEquivalent</key>
+	<string>^~J</string>
+	<key>name</key>
+	<string>Titanium Mobile JavaScript</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=Ti)\s</string>
+			<key>name</key>
+			<string>meta.complete.method.ti</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>source.js</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.js.ti.mobile</string>
+	<key>uuid</key>
+	<string>CB708386-8483-491A-AE9A-A279EA0E17CC</string>
+</dict>
+</plist>
