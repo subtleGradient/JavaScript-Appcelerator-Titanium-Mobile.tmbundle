@@ -1,3 +1,8 @@
+=begin
+---
+url: http://gist.github.com/437000
+...
+=end
 # When creating a custom regex for Word.current_word, you need to keep a few things in mind:
 #   The regex matches from your caret, so your caret position will always be the beginning of the line
 #   Everything before your caret is reversed for the match, so the left of your caret will also match your caret position as ^

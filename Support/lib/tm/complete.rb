@@ -1,4 +1,27 @@
 #!/usr/bin/env ruby
+=begin
+---
+url : http://gist.github.com/437012
+name : complete.rb
+description : "Ruby Code Completion framework for TextMate. Supports ENV var, JSON & Plist completion lists & options."
+
+authors   : Thomas Aylott
+copyright : © 2008-2010 Thomas Aylott
+license   : MIT
+
+provides :
+- "TextMate::Complete"
+- "TextMate::Complete#complete!"
+- "TextMate::Complete#tip!"
+
+requires :
+- "TextMate::UI.complete"
+- "TextMate::UI.tool_tip"
+- "Word.current_word"
+- "OSX::PropertyList"
+- "JSON.parse"
+...
+=end
 require File.dirname(__FILE__) + "/../current_word"
 require ENV['TM_SUPPORT_PATH'] + '/lib/ui'
 require ENV['TM_SUPPORT_PATH'] + '/lib/escape'
