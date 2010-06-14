@@ -22,6 +22,8 @@ How to use
 ### Complete! Type `Ti.`
 As soon as you hit the `.` it'll bring up the as-you-type completion list thing.
 
+Autocomplete on typing `Ti.` only works when using the custom language `JavaScript Titanium Mobile`
+
 ### Complete! ⌥⎋ *option-escape*
 The completion list contains all of the `Titanium` and `Ti` API.
 
