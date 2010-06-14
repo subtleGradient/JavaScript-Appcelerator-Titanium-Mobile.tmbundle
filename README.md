@@ -14,3 +14,20 @@ How to install
 5. Install the JSON Ruby Gem
     * `sudo gem install json`
 6. Enjoy!
+
+
+How to use
+---
+
+### Complete! Type `Ti.`
+As soon as you hit the `.` it'll bring up the as-you-type completion list thing.
+
+### Complete! ⌥⎋ *option-escape*
+The completion list contains all of the `Titanium` and `Ti` API.
+
+
+### Tooltips! ⌥F1 
+The tips are context sensitive. Place your caret anywhere inside of a function (on the same line) and it'll work, even inside the arguments `()`!
+
+
+
