@@ -26,24 +26,31 @@ var fs = require('fs');
 
 require.paths.unshift('./lib');
 
-var Suggestion = require('Suggestion').Suggestion;
-
+var completionArray = [];
 // -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-
-Suggestion.completions.tool_tip_prefix = require('fs').readFileSync(ROOT_DIR + '/tool_tip.template.html');
 
 var API = JSON.parse(fs.readFileSync(ROOT_DIR + '/api.json'));
 
 for (var namespace in API){
 	if (!hasOwnProperty.call(API, namespace)) continue;
 	
-	Suggestion.fromAPI(API[namespace], namespace, API);
-	Suggestion.fromAPI(API[namespace], namespace.replace(/^Titanium/,'Ti'), API);
+	completionArray.push(namespace)
+	completionArray.push(namespace.replace('tanium',''))
+	
+	for (var i = 0; i < API[namespace].methods.length; ++i){
+		completionArray.push(API[namespace].methods[i].name+'()')
+		completionArray.push(namespace + '.' + API[namespace].methods[i].name+'()')
+		completionArray.push(namespace.replace('tanium','') + '.' + API[namespace].methods[i].name+'()')
+	}
+	
+	for (var i = 0; i < API[namespace].properties.length; ++i){
+		completionArray.push(API[namespace].properties[i].name)
+		completionArray.push(namespace + '.' + API[namespace].properties[i].name)
+		completionArray.push(namespace.replace('tanium','') + '.' + API[namespace].properties[i].name)
+	}
 }
-
-addMissingStuff();
-
-fs.writeFileSync(ROOT_DIR + '/completions.json', JSON.stringify(Suggestion.completions))
+sys.p(completionArray)
+// fs.writeFileSync(ROOT_DIR + '/completionArray.json', JSON.stringify(completionArray))
 
 sys.print('Done!')
 

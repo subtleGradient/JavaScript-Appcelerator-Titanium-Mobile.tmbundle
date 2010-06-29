@@ -24,6 +24,7 @@ if (typeof require !== 'undefined'){
 	try {
 		var Snippet = require('Snippet').Snippet;
 		require('global-es5');
+		require('string');
 	} catch(e){}
 }
 
@@ -199,7 +200,7 @@ Suggestion.fromAPI = function(api, namespace, API){
 			API:API,
 			tool_tip : api.description +'<hr />'+ (api.notes || ''),
 			match    : namespace,
-			display  : '(Namespace)\t' + namespace,
+			display  : 'NS\t' + ''.rjust('string,float '.length,'_') + '\t' + namespace,
 			image    : "Namespace"
 		})
 		.toJSON()
@@ -212,7 +213,7 @@ Suggestion.fromAPI = function(api, namespace, API){
 			new Suggestion.Method({
 				API:API,
 				match   : namespace +'.'+ method.name,
-				display : '(Method)\t\t' + namespace +'.'+ method.name + '\t:' + method.returntype + "()",
+				display : 'M\t' + method.returntype.rjust('string,float '.length,'_') + '\t' + namespace +'.'+ method.name + '()',
 				description: method.value
 			})
 			.addParams(method.parameters)
@@ -230,7 +231,7 @@ Suggestion.fromAPI = function(api, namespace, API){
 				tool_tip : property.value,
 				
 				match    : namespace +'.'+ property.name,
-				display  : '(Property)\t' + namespace +'.'+ property.name + '\t:' + property.type
+				display  : 'P\t' + property.type.rjust('string,float '.length,'_') + '\t' + namespace.replace('Titanium','') +'.'+ property.name
 			})
 			.toJSON()
 		);

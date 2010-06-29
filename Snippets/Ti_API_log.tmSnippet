@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>Ti.API.log('${1:info}',${0:${TM_SELECTED_TEXT}})</string>
+	<key>name</key>
+	<string>Ti.API.log</string>
+	<key>scope</key>
+	<string>source.js.ti</string>
+	<key>tabTrigger</key>
+	<string>l</string>
+	<key>uuid</key>
+	<string>72501E12-8711-4DB8-B04C-349D2675F5E6</string>
+</dict>
+</plist>
