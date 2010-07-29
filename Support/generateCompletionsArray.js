@@ -49,6 +49,14 @@ for (var namespace in API){
 		completionArray.push(namespace.replace('tanium','') + '.' + API[namespace].properties[i].name)
 	}
 }
+
+var cobj = {}
+for (var i = -1, l=completionArray.length; i < l; ++i){
+	cobj[completionArray[i]] = true
+}
+completionArray = Object.keys(cobj)
+completionArray.sort()
+
 sys.p(completionArray)
 // fs.writeFileSync(ROOT_DIR + '/completionArray.json', JSON.stringify(completionArray))
 
