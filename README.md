@@ -29,3 +29,5 @@ The tips are context sensitive. Place your caret anywhere inside of a function (
 *Enable this by selecting the "JavaScript Titanium Mobile" language in the bottom bar of TextMate.*
 
 As soon as you hit the `.` (after typing `Ti`) it'll bring up the as-you-type completion list thing.
+
+Note: If you are at the last line and click "." then the code completion list won't appear. You must leave a blank line at the end of your document.
