@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>osascript -e 'tell the application "Xcode" to debug' &amp;&gt;/dev/null &amp;
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>@r</string>
+	<key>name</key>
+	<string>Xcode Debug</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>scope</key>
+	<string>source.js.ti</string>
+	<key>uuid</key>
+	<string>0D82570E-96A6-4C42-9CC2-52A166728507</string>
+</dict>
+</plist>
