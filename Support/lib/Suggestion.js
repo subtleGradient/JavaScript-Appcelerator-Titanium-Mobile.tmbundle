@@ -32,9 +32,9 @@ Suggestion.completions = {
 	
 	extra_chars: "\._$",
 	images: {
-		Namespace:'Namespace.png',
-		Method:'Method.png',
-		Property:'Property.png'
+		// Namespace:'Namespace.png',
+		// Method:'Method.png',
+		// Property:'Property.png'
 	},
 	tool_tip_prefix: "",
 	suggestions:[]
