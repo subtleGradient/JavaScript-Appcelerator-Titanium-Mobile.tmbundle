@@ -29,6 +29,10 @@ require.paths.unshift('./lib');
 var completionArray = [];
 // -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
+/*
+curl -s 'http://developer.appcelerator.com/apidoc/mobile/1.5.1/api.json' > "$(dirname "$TM_FILEPATH")/api.json"
+*/
+
 var API = JSON.parse(fs.readFileSync(ROOT_DIR + '/api.json'));
 
 for (var namespace in API){
@@ -49,15 +53,7 @@ for (var namespace in API){
 		completionArray.push(namespace.replace('tanium','') + '.' + API[namespace].properties[i].name)
 	}
 }
-
-var cobj = {}
-for (var i = -1, l=completionArray.length; i < l; ++i){
-	cobj[completionArray[i]] = true
-}
-completionArray = Object.keys(cobj)
-completionArray.sort()
-
-sys.p(completionArray)
+sys.puts(sys.inspect(completionArray))
 // fs.writeFileSync(ROOT_DIR + '/completionArray.json', JSON.stringify(completionArray))
 
 sys.print('Done!')
