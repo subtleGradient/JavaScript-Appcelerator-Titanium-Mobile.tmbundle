@@ -2,6 +2,8 @@ Appcelerator Titanium Mobile JavaScript TextMate Bundle
 ====
 By [Thomas Aylott](http://SubtleGradient.com)
 
+*MIT License*
+
 How to install
 ----
 
